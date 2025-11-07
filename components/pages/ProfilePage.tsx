@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import type { User } from '../../types';
 import Card from '../ui/Card';
@@ -45,14 +46,13 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ user, onLogout, onUpdateUser 
     onLogout(); 
   };
   
-  // FIX: Renamed `icon` to `Icon` because component variables must be capitalized for JSX.
-  const renderField = (label: string, fieldName: keyof User, Icon: React.ElementType, isEditable: boolean = true) => {
+  const renderField = (label: string, fieldName: keyof User, icon: React.ElementType, isEditable: boolean = true) => {
     const value = formData[fieldName] as string || '';
     if (!user[fieldName]) return null;
 
     return (
       <div className="flex items-center">
-        <Icon className="h-5 w-5 mr-3 text-slate-400 shrink-0" />
+        <icon className="h-5 w-5 mr-3 text-slate-400 shrink-0" />
         <div className="flex-grow">
           <label className="text-xs text-slate-500">{label}</label>
           {isEditing && isEditable ? (
