@@ -49,10 +49,11 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ user, onLogout, onUpdateUser 
   const renderField = (label: string, fieldName: keyof User, Icon: React.ElementType, isEditable: boolean = true) => {
     const value = formData[fieldName] as string || '';
     if (!user[fieldName]) return null;
+    const IconComponent = Icon;
 
     return (
       <div className="flex items-center">
-        <Icon className="h-5 w-5 mr-3 text-slate-400 shrink-0" />
+        <IconComponent className="h-5 w-5 mr-3 text-slate-400 shrink-0" />
         <div className="flex-grow">
           <label className="text-xs text-slate-500">{label}</label>
           {isEditing && isEditable ? (
