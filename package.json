@@ -4,7 +4,7 @@
   "private": true,
   "description": "A comprehensive application for managing school transport in the UK.",
   "scripts": {
-    "build": "vite build""
+    "build": "vite build"
   },
   "devDependencies": {
     "patch-package": "^8.0.0"
