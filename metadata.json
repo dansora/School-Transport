@@ -1,0 +1,7 @@
+{
+  "name": "School Transport UK",
+  "description": "A comprehensive application for managing school transport in the UK, connecting authorities, operators, drivers, assistants, and users. This app streamlines contract management, route planning, and real-time communication for all stakeholders.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
